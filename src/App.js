@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { Route } from 'react-router-dom';
+import { Header } from './components';
+import { Home, Cart } from './pages';
+import { fetchPizzas } from './redux/actions/pizza';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const dispatch = useDispatch();
+
+    window.test = () => {
+        dispatch(fetchPizzas());
+    };
+
+    return (
+        <div className="wrapper">
+            <Header />
+            <div className="content">
+                <Route path="/" exact component={Home} />
+                <Route path="/cart" exact component={Cart} />
+            </div>
+        </div>
+    );
 }
 
 export default App;

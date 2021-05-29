@@ -311,3 +311,80 @@ body {
         }
     }
 }
+
+@media (min-width: 320px) {
+    body {
+        padding: 20px 0;
+    }
+    .wrapper {
+        width: calc(100vw - 30px);
+    }
+    .header__logo h1 {
+        font-size: 18px;
+    }
+    .header__logo p {
+        display: none;
+    }
+    .header__logo > div {
+        display: flex;
+        align-items: center;
+    }
+    .button--cart {
+        padding: 5px 15px;
+    }
+    .content__top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .categories {
+        max-width: 100%;
+        overflow: auto;
+        margin-bottom: 20px;
+    }
+    .categories ul li {
+        padding: 6px 20px;
+    }
+    .sort {
+        align-self: flex-end;
+    }
+    .content__items {
+        justify-content: center;
+        margin: 0 -30px;
+    }
+    .pizza-block {
+        width: auto;
+        margin: 0 30px;
+        margin-bottom: 40px;
+    }
+    .cart--empty {
+        width: auto;
+    }
+}
+@media (min-width: 768px) {
+    .content__items {
+        justify-content: space-around;
+        margin: 0 -70px;
+    }
+    .pizza-block {
+        width: 280px;
+        margin: 0 70px;
+        margin-bottom: 65px;
+    }
+    .header__logo > div {
+        display: block;
+    }
+    .header__logo p {
+        display: block;
+    }
+}
+@media (min-width: 1024px) {
+    .content__items {
+        justify-content: space-around;
+        margin: 0 -70px;
+    }
+    .pizza-block {
+        width: 280px;
+        margin: 0 70px;
+        margin-bottom: 65px;
+    }
+}

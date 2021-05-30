@@ -378,6 +378,12 @@ body {
     }
 }
 @media (min-width: 1024px) {
+    body {
+        padding: 50px 0;
+    }
+    .wrapper {
+        width: calc(100vw - 100px);
+    }
     .content__items {
         justify-content: space-around;
         margin: 0 -70px;
@@ -386,5 +392,21 @@ body {
         width: 280px;
         margin: 0 70px;
         margin-bottom: 65px;
+    }
+    .content__top {
+        flex-direction: row;
+        align-items: center;
+    }
+    .categories {
+        margin-bottom: 0;
+    }
+    .sort {
+        align-self: center;
+    }
+    .categories ul li {
+        padding: 13px 30px;
+    }
+    .button--cart {
+        padding: 12px 25px;
     }
 }
